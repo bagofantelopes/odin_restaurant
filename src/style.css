@@ -12,7 +12,7 @@ div {
 }
 
 #content div {
-    padding: 10px;
+    margin: 10px auto;
 }
 
 #content img {
@@ -24,6 +24,23 @@ div {
 }
 
 #buttonDiv {
-    display: block;
-    padding: 10px auto;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10%;
+    margin: 0 auto;
+    padding: 30px;
+
+    background-color: aliceblue;
+}
+
+#buttonDiv button {
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border: 1px solid black;
+    margin: 5px auto;
+    padding: 10px;
+    font-size: 1.5rem;
+
+    background-color: lightslategray;
+    color: white;
 }
