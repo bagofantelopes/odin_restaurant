@@ -4,14 +4,6 @@ import menuTab from './menu_tab.js';
 import contactTab from './contact_tab.js';
 
 const content = document.getElementById('content');
-// function to generate header section
-const header = () => {
-    console.log('loading header');
-    const element = document.createElement('div');
-    element.innerText = 'Insert header bar here';
-
-    return element;
-};
 
 const buttonCreation = () => {
     const buttonDiv = document.createElement('div');
@@ -40,13 +32,26 @@ const buttonCreation = () => {
     return buttonDiv;
 }
 
+const footerCreation = () => {
+    const element = document.getElementById('footer');
+    const footerBar = document.createElement('div');
+    footerBar.setAttribute('class', 'footerBar');
+
+    const footerObj1 = document.createElement('div');
+    footerObj1.innerText = 'Odin Restaurant project by Travis F.'
+
+    footerBar.appendChild(footerObj1);
+    element.appendChild(footerBar);
+    return element;
+}
 
 export default function pageSetup() {
     console.log('Loading page...');
     content.appendChild(buttonCreation());
-    content.appendChild(header());
     content.appendChild(homeTab());
     
     content.appendChild(menuTab());
     content.appendChild(contactTab());
+
+    footerCreation();
 };

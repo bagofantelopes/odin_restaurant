@@ -1,18 +1,23 @@
+html, body {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: center;
     text-align: center;
+    background-color: royalblue;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-}
+#content {
+    flex: 1 0 auto;
+    padding: 20px;    
+    margin: 10px;
 
-#content div {
-    margin: 10px auto;
+    border: 5px solid black;
+    background-color: lightsteelblue;
 }
 
 #content img {
@@ -25,22 +30,38 @@ div {
 
 #buttonDiv {
     display: inline-block;
-    border: 1px solid black;
+    border: 1rem groove whitesmoke;
     border-radius: 10%;
     margin: 0 auto;
     padding: 30px;
 
-    background-color: aliceblue;
+    background-color: darkslategrey;
 }
 
 #buttonDiv button {
     border-top-left-radius: 25%;
     border-top-right-radius: 25%;
-    border: 1px solid black;
+    border: 5px groove white;
     margin: 5px auto;
     padding: 10px;
     font-size: 1.5rem;
 
     background-color: lightslategray;
     color: white;
+}
+
+#footer {
+    flex-shrink: 0;
+    padding: 20px;
+    
+    border: 5px solid black;
+    background-color: lightsteelblue;
+    
+}
+
+.footerBar {
+    display: flex;
+    justify-content: center;
+
+    font-size: smaller;
 }
